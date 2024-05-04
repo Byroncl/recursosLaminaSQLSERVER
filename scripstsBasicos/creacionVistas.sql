@@ -54,6 +54,10 @@ INNER JOIN dbo.Ventas v ON c.ClienteID = v.ClienteID
 INNER JOIN dbo.DetallesVenta dv ON v.VentaID = dv.VentaID
 INNER JOIN dbo.Productos p ON dv.ProductoID = p.ProductoID;
 
+-- Alterar la tabla de clientes para agregar una columna de país
+ALTER TABLE Clientes
+ADD Country VARCHAR(100);
+
 -- Uso de WITH CHECK OPTION
 ALTER VIEW VIEW_CLIENTESPORPAIS
 AS
