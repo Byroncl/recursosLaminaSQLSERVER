@@ -25,9 +25,6 @@ Declare @forma geometry
 Set @forma=geometry::STGeomFromText('CIRCULARSTRING (1 1, 2 2, 3 1, 2 0, 1 1)',0)
 Select @forma
 
-USE AdventureWorks;
-GO
-
 -- Paso 2 - Dibuja una forma usando geometría
 
 DECLARE @Shape geometry;
